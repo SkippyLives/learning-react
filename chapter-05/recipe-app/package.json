@@ -4,9 +4,9 @@
   "description": "Learning React Chapter 5 sample for modular recipes with webpack",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development",
-    "prestart": "npm run build",
-    "start": "serve ./dist"
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && webpack --mode development",
+    "prestart": "export NODE_OPTIONS=--openssl-legacy-provider && npm run build",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && serve ./dist"
   },
   "repository": {
     "type": "git",
